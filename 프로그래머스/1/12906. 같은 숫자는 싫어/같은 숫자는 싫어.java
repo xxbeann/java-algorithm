@@ -1,9 +1,8 @@
 import java.util.*;
 
 public class Solution {
-    public List<Integer> solution(int []arr) {
+    public int[] solution(int []arr) {
         
-        int[] answer = {};
         List<Integer> temp = new ArrayList<>();
         
         temp.add(arr[0]);
@@ -11,9 +10,15 @@ public class Solution {
             if(arr[i] != arr[i-1]) {
                 temp.add(arr[i]);
             }
-            //System.out.println(temp);
         }
+        
+        int[] answer = new int[temp.size()];
+        
+        for (int j = 0 ; j < temp.size() ; j++ ) {
+            answer[j] = temp.get(j);
+        }
+        
 
-        return temp;
+        return answer;
     }
 }
